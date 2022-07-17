@@ -1,0 +1,15 @@
+###################
+###### FILES ######
+###################
+ETL_ITU_Play_Variables.py
+ETL_ITU_Play.csv
+
+#####################
+###### FOLDERS ######
+#####################
+
+#VSCode Debugging
+.vscode/
+
+#Pycache
+__pycache__/
