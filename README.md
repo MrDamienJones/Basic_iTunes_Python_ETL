@@ -1,6 +1,8 @@
-# ETL-ITU-Play
+# Basic_iTunes_Python_ETL
 
-ETL-ITU-Play is a Python script that uses AWS Data Wrangler to extract data from CSVs in Amazon S3.  The ETL performs the following actions:
+Basic_iTunes_Python_ETL is a Python ETL using AWS Data Wrangler that extracts data from an iTunes export file in Amazon S3, transforms the data in a DataFrame and loads to a CSV file.
+
+The ETL performs the following actions:
 
 - Creating DataFrame.
 - Deleting unnecessary DataFrame columns.
