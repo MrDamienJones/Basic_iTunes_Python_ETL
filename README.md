@@ -1,6 +1,6 @@
 # Basic_iTunes_Python_ETL
 
-Basic_iTunes_Python_ETL is a Python ETL using AWS Data Wrangler that extracts data from an iTunes export file in Amazon S3, transforms the data in a DataFrame and loads to a CSV file.
+Basic_iTunes_Python_ETL is a Python ETL using AWS Data Wrangler that extracts data from an iTunes export file in Amazon S3, transforms the data in a DataFrame and loads to a Parquet file.
 
 The ETL performs the following actions:
 
@@ -12,9 +12,9 @@ The ETL performs the following actions:
 - Creating MyRatingDigit Column.
 - Replacing blank values to prevent IntCastingNaN errors.
 - Setting Data Types.
-- Creating CSV of DataFrame.
+- Creating Parquet file from DataFrame.
 
-This document is supported by [Creating A Basic iTunes ETL With Python And AWS Data Wrangler](https://www.amazonwebshark.com/creating-a-basic-itunes-etl-with-python-and-aws-data-wrangler) on [amazonwebshark.com](https://www.amazonwebshark.com).
+This document is supported by [Creating A Basic iTunes ETL With Python And AWS Data Wrangler](https://www.amazonwebshark.com/creating-a-basic-itunes-etl-with-python-and-aws-data-wrangler) and [Ingesting iTunes Data Into AWS With Python And Athena](https://www.amazonwebshark.com/ingesting-itunes-data-into-aws-with-python-and-athena) on [amazonwebshark.com](https://www.amazonwebshark.com).
 
 ## Prerequisites 
 
@@ -40,8 +40,10 @@ AWS_SECRET = 'mysecretkey123456789'
 
 
 # Set variables : S3 Paths
-S3_BUCKET = 'my-s3-bucket-name-containing-the-csv'
-S3_PREFIX = 'myfoldercontainingthecsv/mysubfoldercontainingthecsv/'
+S3_BUCKET_RAW = 'my-s3-bucket-name-containing-the-csv'
+S3_PREFIX_RAW = 'myfoldercontainingthecsv/mysubfoldercontainingthecsv/'
+S3_BUCKET_INGESTED = 'my-s3-bucket-name-for-the-parquet'
+S3_PREFIX_INGESTED = 'myfolderfortheparquet/mysubfolderfortheparquet/'
 ```
 
 ## Usage
@@ -70,10 +72,7 @@ Replacing blank values to prevent IntCastingNaN errors.
 
 Setting Data Types.
 
-Creating CSV of DataFrame with columns Index(['name', 'artist', 'album', 'genre', 'tracknumber', 'year',
-       'datemodified', 'dateadded', 'plays', 'lastplayed', 'myrating',
-       'datemodifieddate', 'dateaddeddate', 'lastplayeddate', 'myratingdigit'],
-      dtype='object')
+Creating Parquet file from DataFrame.
 
 Processes complete.
 ```
