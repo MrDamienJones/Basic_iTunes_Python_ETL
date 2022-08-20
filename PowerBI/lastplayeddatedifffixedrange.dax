@@ -1,0 +1,59 @@
+lastplayeddatedifffixedrange =
+IF (
+    basic_itunes_python_etl[lastplayeddatedifffixed] = 0,
+    "Unplayed",
+    IF (
+        basic_itunes_python_etl[lastplayeddatedifffixed] < 183,
+        "0.5 Year",
+        IF (
+            AND (
+                basic_itunes_python_etl[lastplayeddatedifffixed] > 182,
+                basic_itunes_python_etl[lastplayeddatedifffixed] < 366
+            ),
+            "1 Year",
+            IF (
+                AND (
+                    basic_itunes_python_etl[lastplayeddatedifffixed] > 365,
+                    basic_itunes_python_etl[lastplayeddatedifffixed] < 548
+                ),
+                "1.5 Years",
+                IF (
+                    AND (
+                        basic_itunes_python_etl[lastplayeddatedifffixed] > 547,
+                        basic_itunes_python_etl[lastplayeddatedifffixed] < 731
+                    ),
+                    "2 Years",
+                    IF (
+                        AND (
+                            basic_itunes_python_etl[lastplayeddatedifffixed] > 730,
+                            basic_itunes_python_etl[lastplayeddatedifffixed] < 913
+                        ),
+                        "2.5 Years",
+                        IF (
+                            AND (
+                                basic_itunes_python_etl[lastplayeddatedifffixed] > 912,
+                                basic_itunes_python_etl[lastplayeddatedifffixed] < 1096
+                            ),
+                            "3 Years",
+                            IF (
+                                AND (
+                                    basic_itunes_python_etl[lastplayeddatedifffixed] > 1095,
+                                    basic_itunes_python_etl[lastplayeddatedifffixed] < 1278
+                                ),
+                                "3.5 Years",
+                                IF (
+                                    AND (
+                                        basic_itunes_python_etl[lastplayeddatedifffixed] > 1277,
+                                        basic_itunes_python_etl[lastplayeddatedifffixed] < 1461
+                                    ),
+                                    "4 Years",
+                                    "Over 4 Years"
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
+)

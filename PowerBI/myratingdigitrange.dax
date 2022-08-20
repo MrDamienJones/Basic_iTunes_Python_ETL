@@ -1,0 +1,9 @@
+myratingdigitrange =
+IF (
+    basic_itunes_python_etl[Rating] = 0,
+    "R0",
+    IF ( basic_itunes_python_etl[Rating] < 3, 
+    "R1-R2", 
+    "R3-R5" 
+    )
+)

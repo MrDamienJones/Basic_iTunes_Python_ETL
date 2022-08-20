@@ -1,0 +1,34 @@
+Plays (Range) =
+IF (
+    basic_itunes_python_etl[plays] = 0,
+    "P0",
+    IF (
+        AND ( 
+            basic_itunes_python_etl[plays] > 0, 
+            basic_itunes_python_etl[plays] < 6 
+        ),
+        "P01-P05",
+        IF (
+            AND ( 
+                basic_itunes_python_etl[plays] > 5, 
+                basic_itunes_python_etl[plays] < 11 
+            ),
+            "P06-P10",
+            IF (
+                AND ( 
+                    basic_itunes_python_etl[plays] > 10, 
+                    basic_itunes_python_etl[plays] < 21 
+                ),
+                "P11-P20",
+                IF (
+                    AND ( 
+                        basic_itunes_python_etl[plays] > 20, 
+                        basic_itunes_python_etl[plays] < 31 
+                    ),
+                    "P21-P30",
+                    "P31+"
+                )
+            )
+        )
+    )
+)

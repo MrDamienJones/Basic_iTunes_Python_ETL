@@ -14,7 +14,12 @@ The ETL performs the following actions:
 - Setting Data Types.
 - Creating Parquet file from DataFrame.
 
-This document is supported by [Creating A Basic iTunes ETL With Python And AWS Data Wrangler](https://www.amazonwebshark.com/creating-a-basic-itunes-etl-with-python-and-aws-data-wrangler) and [Ingesting iTunes Data Into AWS With Python And Athena](https://www.amazonwebshark.com/ingesting-itunes-data-into-aws-with-python-and-athena) on [amazonwebshark.com](https://www.amazonwebshark.com).
+This document is supported by the following blog posts on [amazonwebshark.com](https://www.amazonwebshark.com):
+
+- [Creating A Basic iTunes ETL With Python And AWS Data Wrangler](https://www.amazonwebshark.com/creating-a-basic-itunes-etl-with-python-and-aws-data-wrangler) 
+- [Ingesting iTunes Data Into AWS With Python And Athena](https://www.amazonwebshark.com/ingesting-itunes-data-into-aws-with-python-and-athena) 
+- [Analysing iTunes Play Counts With Athena And Power BI](https://www.amazonwebshark.com/analysing-itunes-play-counts-with-athena-and-power-bi)
+
 
 ## Prerequisites 
 
@@ -78,6 +83,11 @@ Processes complete.
 ```
 
 
+## Additional Resources
+
+Several Power BI DAX scripts are included in this repo.  They are not required to run the Python ETL, and are included here for completeness.
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss the changes.
 
@@ -87,6 +97,8 @@ Please bear in mind that this script is a work in progress.  I'm happy for this 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
+
 ## Credits
 
 - README Template provided by [makeareadme.com](https://www.makeareadme.com/)
+- DAX Script formatting provided by [daxformatter.com](https://www.daxformatter.com/)
