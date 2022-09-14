@@ -1,0 +1,41 @@
+bpm-group = 
+IF (
+    basic_itunes_python_etl[bpm] < 127,
+    "B000-B126",
+    IF (
+        AND (
+            basic_itunes_python_etl[bpm] > 126,
+            basic_itunes_python_etl[bpm] < 130
+        ),
+        "B127-B129",
+        IF (
+            AND (
+                basic_itunes_python_etl[bpm] > 129,
+                basic_itunes_python_etl[bpm] < 134
+            ),
+            "B130-B133",
+            IF (
+                AND (
+                    basic_itunes_python_etl[bpm] > 133,
+                    basic_itunes_python_etl[bpm] < 138
+                ),
+                "B134-B137",
+                IF (
+                    AND (
+                        basic_itunes_python_etl[bpm] > 137,
+                        basic_itunes_python_etl[bpm] < 141
+                    ),
+                    "B138-B140",
+                    IF (
+                        AND (
+                            basic_itunes_python_etl[bpm] > 140,
+                            basic_itunes_python_etl[bpm] < 151
+                        ),
+                        "B141-B150",
+                        "B151+"
+                    )
+                )
+            )
+        )
+    )
+)

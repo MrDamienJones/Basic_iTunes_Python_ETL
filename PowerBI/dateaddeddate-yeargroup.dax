@@ -1,0 +1,31 @@
+dateaddeddate-yeargroup = 
+    IF (
+        AND (
+            basic_itunes_python_etl[dateaddeddate-year] > 2009,
+            basic_itunes_python_etl[dateaddeddate-year] < 2013
+        ),
+        "2010-2012",
+        IF (
+            AND (
+                basic_itunes_python_etl[dateaddeddate-year] > 2012,
+                basic_itunes_python_etl[dateaddeddate-year] < 2016
+            ),
+            "2013-2015",
+            IF (
+                AND (
+                    basic_itunes_python_etl[dateaddeddate-year] > 2015,
+                    basic_itunes_python_etl[dateaddeddate-year] < 2019
+                ),
+                "2016-2018",
+                IF (
+                    AND (
+                        basic_itunes_python_etl[dateaddeddate-year] > 2018,
+                        basic_itunes_python_etl[dateaddeddate-year] < 2022
+                    ),
+                    "2019-2021",
+                    CONVERT(basic_itunes_python_etl[dateaddeddate-year],STRING
+                            )
+                        )
+                    )
+                )
+            )

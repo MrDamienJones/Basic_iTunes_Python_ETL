@@ -4,6 +4,7 @@
 CREATE-basic_itunes_python_etl.sql
 ETL_ITU_Play_Variables.py
 ETL_ITU_Play.csv
+lastplayeddate-difffixedrange.dax
 
 #####################
 ###### FOLDERS ######
